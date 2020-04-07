@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Quick Quizzer</string>
+    <string name="menu_welcome">Welcome to Quick Quizzer!</string>
+    <string name="menu_begin_quiz">Begin Quiz</string>
+    <string name="menu_question_editor">Question Editor</string>
+
 </resources>
