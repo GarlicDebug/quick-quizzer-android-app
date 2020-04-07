@@ -1,2 +1,1 @@
-# finalproject-GarlicDebug
-finalproject-GarlicDebug created by GitHub Classroom
+# Final Project belonging to Reise Campbell
