@@ -65,6 +65,7 @@ public class QuestionList {
         saveQuestions();
     }
 
+    //TODO: maybe remove this
     //make a bunch of dummy questions
     private QuestionList(Context appContext){
         mAppContext = appContext;

@@ -4,4 +4,10 @@
     <string name="menu_begin_quiz">Begin Quiz</string>
     <string name="menu_question_editor">Question Editor</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quizzing_true">True</string>
+    <string name="quizzing_false">False</string>
+    <string name="quizzing_question_error">No question was found to ask. Try adding one!</string>
+
 </resources>
