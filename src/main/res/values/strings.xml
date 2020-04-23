@@ -3,11 +3,16 @@
     <string name="menu_welcome">Welcome to Quick Quizzer!</string>
     <string name="menu_begin_quiz">Begin Quiz</string>
     <string name="menu_question_editor">Question Editor</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_list_label">Questions</string>
     <string name="quizzing_true">True</string>
     <string name="quizzing_false">False</string>
     <string name="quizzing_question_error">No question was found to ask. Try adding one!</string>
+    <string name="question_deleted_msg">%1$s deleted!</string>
+    <string name="undo_option">UNDO</string>
+    <string name="new_question">New Question</string>
+    <string name="editor_question_solution">Is the correct answer \"True\"?</string>
+    <string name="editor_question_enter_hint">Enter your question here</string>
+    <string name="editor_entry_label">Question creation:</string>
+
 
 </resources>

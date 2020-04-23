@@ -23,7 +23,7 @@ public class Question {
     /** JSON attribute for the Question Solution */
     private static final String JSON_SOLUTION = "solution";
 
-    //possible other attributes: subject, scoring system (point weights)
+    //TODO: add possible other attributes: subject, scoring system (point weights)
 
     /**
      * Create and initialize a new question
