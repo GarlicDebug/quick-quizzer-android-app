@@ -14,7 +14,7 @@ public class Question {
     /** Body text of the question */
     private String mBody;
     /** True/False solution to the question */
-    private Boolean mSolution;
+    private Boolean mSolution = false;
 
     /** JSON attribute for the Question ID */
     private static final String JSON_ID = "id";
