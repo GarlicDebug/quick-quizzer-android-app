@@ -8,9 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,10 +16,8 @@ import com.google.android.material.snackbar.Snackbar;
  * Adapter responsible for getting the view for a bug.
  */
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder> {
-    public static final String TAG="QuestionAdapter";
     /** key used to pass the id of a question */
-    public static final String EXTRA_QUESTION_ID
-            ="edu.andrews.quickquizzer.questiontracker.question_id";
+    public static final String EXTRA_QUESTION_ID = "edu.andrews.quickquizzer.question_id";
     /** Used to store reference to list of questions */
     private ArrayList<Question> mQuestions;
 
@@ -64,7 +60,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             }
         });
         // Text for UNDO will be yellow
-        snackbar.setActionTextColor(Color.YELLOW);
+        snackbar.setActionTextColor(Color.parseColor("#D33333"));
         // display snackbar
         snackbar.show();
     }
@@ -171,7 +167,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         TextView questionTitleTextView = viewHolder.questionTitleTextView;
         TextView questionAnswerTextView = viewHolder.answerTextView;
 
-        // TODO:
         // Updated widgets on view with question details
         questionTitleTextView.setText(question.getBody());
         questionAnswerTextView.setText(question.getSolution().toString());

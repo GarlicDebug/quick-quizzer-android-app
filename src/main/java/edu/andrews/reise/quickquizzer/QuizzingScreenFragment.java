@@ -1,35 +1,23 @@
 package edu.andrews.reise.quickquizzer;
 
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
-
+//TODO: Add count of what number question you are on to layout
 /**
  * Displays the questions, and handles the answer inputs
  * A simple {@link Fragment} subclass.
  */
-//TODO: Add count of what number question you are on to layout
-    //TODO: add quote hint
 public class QuizzingScreenFragment extends Fragment {
-
-    /** ImageView used to display inspirational image */
-    private ImageView mImageView;
-
-    /** Key for the fact about the author stored in Intent sent to AuthorFactActivity. */
-    public static final String EXTRA_AUTHOR_FACT =
-            "edu.andrews.cptr252.rlsummerscales.questionoftheday.author_fact";
-
-
+    /** Key for the hint about the question stored in Intent sent to QuestionHintActivity. */
+    public static final String EXTRA_QUESTION_HINT = "edu.andrews.cptr252.quickquizzer.questionhint";
     /** Used for logging questionIndex*/
     private static final String KEY_QUESTION_INDEX = "questionIndex";
     /** TextView for holding the question text */
@@ -42,15 +30,20 @@ public class QuizzingScreenFragment extends Fragment {
     private int mCurrentIndex = 0;
     /** Array of questions to display */
     private ArrayList<Question> mQuestionList;
-    /** */
-    String answerFeedbackCorrect = "Your answer was correct!";
-    String answerFeedbackIncorrect = "Your answer was incorrect!";
+    /** String displayed in a toast if answer is correct*/
+    private String answerFeedbackCorrect = "Your answer was correct!";
+    /** String displayed in a toast if answer is incorrect*/
+    private String answerFeedbackIncorrect = "Your answer was incorrect!";
 
 
     public QuizzingScreenFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Returns a new instance of the fragment
+     * @return new instance of the fragment
+     */
     public static Fragment newInstance(){
         Bundle args = new Bundle();
         QuizzingScreenFragment fragment = new QuizzingScreenFragment();
@@ -70,14 +63,14 @@ public class QuizzingScreenFragment extends Fragment {
         savedInstanceState.putInt(KEY_QUESTION_INDEX, mCurrentIndex);
     }
 
-    /** Launch activity to display question hint */
+    //TODO: add question hints
+    //** Launch activity to display question hint */
     /*
     private void displayQuestionHint(){
         Intent i = new Intent(getActivity(), QuestionHintActivity.class);
-        i.putExtra(EXTRA_AUTHOR_FACT, mQuestionList[mCurrentIndex].getAuthorFact());
+        i.putExtra(EXTRA_QUESTION_HINT, mQuestionList[mCurrentIndex].getAuthorFact());
         getContext().startActivity(i);
     }
-
      */
 
     /** Display the question at the current index */
@@ -109,7 +102,6 @@ public class QuizzingScreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_quizzing_screen, container, false);
-        //setContentView(R.layout.activity_question);
 
         mQuestionList = QuestionList.getInstance(getActivity()).getQuestions();
 
@@ -118,19 +110,9 @@ public class QuizzingScreenFragment extends Fragment {
         mCurrentIndex = savedInstanceState.getInt(KEY_QUESTION_INDEX);
         }
 
-        mQuestionTextView = v.findViewById(R.id.questionBodyTextView);
-
-        /*
-        mQuestionTextView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                displayQuestionHint();
-            }
-        });
-         */
-
         updateQuestion();
 
+        mQuestionTextView = v.findViewById(R.id.questionBodyTextView);
         mTrueButton = v.findViewById(R.id.trueButton);
         mFalseButton = v.findViewById(R.id.falseButton);
 
@@ -158,6 +140,15 @@ public class QuizzingScreenFragment extends Fragment {
                 updateQuestion();
             }
         });
+
+                /*
+        mQuestionTextView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                displayQuestionHint();
+            }
+        });
+         */
 
         return v;
     }

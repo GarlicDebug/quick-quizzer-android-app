@@ -1,21 +1,19 @@
 package edu.andrews.reise.quickquizzer;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
 import java.util.ArrayList;
 import java.util.UUID;
 
 public class QuestionDetailsActivity extends FragmentActivity {
-    /** ViewPager component that allows users to browse buys by swiping */
+    /** ViewPager component that allows users to browse questions by swiping */
     private ViewPager mViewPager;
 
-    /**Array of questions */
+    /**Array of questions made by the user*/
     private ArrayList<Question> mQuestions;
 
     @Override
@@ -61,28 +59,5 @@ public class QuestionDetailsActivity extends FragmentActivity {
                 break;
             }
         }
-
-        //If there is an App Bar (aka ActionBar)
-        //Display the title of the current question there.
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i2) {
-
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-                Question question = mQuestions.get(i);
-                if (question.getBody() != null){
-                    setTitle(question.getBody());
-                }
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-
-            }
-        });
     }
 }

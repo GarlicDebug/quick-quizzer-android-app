@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +22,7 @@ public class QuestionSwiper extends ItemTouchHelper.SimpleCallback {
     private Drawable mIcon;
     /** Background color displayed as question view is swiped */
     private final ColorDrawable mBackground;
+
     public QuestionSwiper(QuestionAdapter adapter) {
         // only supporting left/right swiping (not up/down)
         super(0,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
@@ -33,6 +33,7 @@ public class QuestionSwiper extends ItemTouchHelper.SimpleCallback {
         // Set background color displayed as question is swiped
         mBackground = new ColorDrawable(Color.parseColor("#D33333"));
     }
+
     /**
      * Returns true if user drags a question to another position in the list.
      * Our app does not support moving questions, so the function just returns false.
@@ -46,6 +47,7 @@ public class QuestionSwiper extends ItemTouchHelper.SimpleCallback {
                           RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
         return false; // question cannot be moved. only swiped left/right.
     }
+
     /**
      * User has swiped a question off screen.
      * @param viewHolder Containing the swiped question.
@@ -58,6 +60,7 @@ public class QuestionSwiper extends ItemTouchHelper.SimpleCallback {
         // Tell question adapter to delete the swiped question
         mAdapter.deleteQuestion(deletedPosition);
     }
+
     /**
      * Draw icon and background as question is swiped.
      * @param c The canvas that the RecyclerView is drawing on.

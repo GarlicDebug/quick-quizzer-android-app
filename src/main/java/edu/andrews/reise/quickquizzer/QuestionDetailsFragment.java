@@ -7,12 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
-
 import androidx.fragment.app.Fragment;
 
 import java.util.UUID;
@@ -29,11 +26,7 @@ public class QuestionDetailsFragment extends Fragment {
     private Question mQuestion;
     /** Reference to title field for question */
     private EditText mTitleField;
-    /** Reference to question description field */
-    private EditText mDescriptionField;
-    /** Reference to question date button */
-    private Button mDateButton;
-    /**Reference to question solved check box */
+    /**Reference to question solution switch */
     private Switch mSolutionSwitch;
 
     public QuestionDetailsFragment() {
@@ -73,7 +66,6 @@ public class QuestionDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_question_details, container, false);
         View v = inflater.inflate(R.layout.fragment_question_details, container, false);
 
         // get reference to EditText box for question body
@@ -99,19 +91,17 @@ public class QuestionDetailsFragment extends Fragment {
             }
         });
 
-
-
-        //TODO:
         //get reference to solution switch
         mSolutionSwitch = v.findViewById(R.id.question_solution_switch);
         mSolutionSwitch.setChecked(mQuestion.getSolution());
-        //toggle question solved status when check box is tapped
+
+        //toggle question solved status when check box is checked
         mSolutionSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                //set the question's solved property
+                //set the question's solution
                 mQuestion.setSolution(isChecked);
-                Log.d(TAG, "Set solved status to "+isChecked);
+                Log.d(TAG, "Set solution to "+isChecked);
             }
         });
 

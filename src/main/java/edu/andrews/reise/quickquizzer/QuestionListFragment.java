@@ -2,13 +2,10 @@ package edu.andrews.reise.quickquizzer;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,9 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
-
 
 /**
  * Fragment to display a list of Questions.
@@ -32,6 +27,11 @@ public class QuestionListFragment extends Fragment {
     private RecyclerView mRecyclerView;
     /** Adapter that generates/reuses views to display questions */
     private QuestionAdapter mQuestionAdapter;
+
+    public QuestionListFragment() {
+        // Required empty public constructor
+    }
+
     /** Create a new question, add it to the list and launch question editor. */
     private void addQuestion(){
         // create new question
@@ -65,7 +65,6 @@ public class QuestionListFragment extends Fragment {
         }
     }
 
-
     /**
      * Question list fragment was paused (user was likely editing a question).
      * Notify the adapter that the data set (Question list) may have changed.
@@ -77,13 +76,8 @@ public class QuestionListFragment extends Fragment {
         mQuestionAdapter.notifyDataSetChanged();
     }
 
-    public QuestionListFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState){
-        getActivity().getApplication().setTheme(R.style.AppThemeWithBar);
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         getActivity().setTitle(R.string.question_list_label);
@@ -114,7 +108,6 @@ public class QuestionListFragment extends Fragment {
         QuestionSwiper questionSwiper = new QuestionSwiper(mQuestionAdapter);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(questionSwiper);
         itemTouchHelper.attachToRecyclerView(mRecyclerView);
-
 
         return v;
     }

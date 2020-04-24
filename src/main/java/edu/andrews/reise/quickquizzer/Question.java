@@ -2,7 +2,6 @@ package edu.andrews.reise.quickquizzer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.UUID;
 
 /**
@@ -23,8 +22,6 @@ public class Question {
     /** JSON attribute for the Question Solution */
     private static final String JSON_SOLUTION = "solution";
 
-    //TODO: add possible other attributes: subject, scoring system (point weights)
-
     /**
      * Create and initialize a new question
      */
@@ -34,7 +31,7 @@ public class Question {
 
     /**
      * Initialize a new question from a JSON object
-     * @param json is the JSON object for a question
+     * @param json JSON object for a question
      * @throws JSONException
      */
     public Question(JSONObject json) throws JSONException {

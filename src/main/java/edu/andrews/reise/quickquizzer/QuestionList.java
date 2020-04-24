@@ -65,8 +65,10 @@ public class QuestionList {
         saveQuestions();
     }
 
-    //TODO: maybe remove this
-    //make a bunch of dummy questions
+    /**
+     * Creates the QuestionList instance by loading the questions from JSON file
+     * @param appContext Context variable that hold information about the app environment
+     */
     private QuestionList(Context appContext){
         mAppContext = appContext;
         //create our serializer to load and save questions

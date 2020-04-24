@@ -3,8 +3,6 @@ package edu.andrews.reise.quickquizzer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,10 +31,12 @@ public class QQMenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_q_q_menu, container, false);
 
+        //assign the widget variables to the appropriate widgets
         quizStartButton = v.findViewById(R.id.beginButton);
         questionEditButton = v.findViewById(R.id.editButton);
         bonusButton = v.findViewById(R.id.bonusButton);
 
+        //Navigate to appropriate places based on button clicks
         quizStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,8 +54,7 @@ public class QQMenuFragment extends Fragment {
         bonusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-                startActivity(browserIntent);
+                displayBonusVideo();
             }
         });
 
@@ -72,5 +71,11 @@ public class QQMenuFragment extends Fragment {
     private void displayQuestionList(){
         Intent i = new Intent(getActivity(), QuestionListActivity.class);
         getContext().startActivity(i);
+    }
+
+    /** Launch bonus video */
+    private void displayBonusVideo(){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+        startActivity(browserIntent);
     }
 }
