@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#272635"
     tools:context=".QuizzingScreenFragment">
 
     <Button
@@ -12,7 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginBottom="128dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/quizzing_true"
+        android:textColor="#C2C3C9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -21,7 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/quizzing_false"
+        android:textColor="#C2C3C9"
         app:layout_constraintBaseline_toBaselineOf="@+id/trueButton"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -31,9 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/playfair_display_bold_italic"
         android:text="@string/quizzing_question_error"
         android:textAlignment="center"
+        android:textColor="#C2C3C9"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/trueButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/playfair_display_bold_italic"
         android:text="Question:"
+        android:textColor="#C2C3C9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

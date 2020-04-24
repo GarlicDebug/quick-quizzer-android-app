@@ -13,6 +13,7 @@
     <string name="editor_question_solution">Is the correct answer \"True\"?</string>
     <string name="editor_question_enter_hint">Enter your question here</string>
     <string name="editor_entry_label">Question creation:</string>
+    <string name="menu_bonus">Bonus!</string>
 
 
 </resources>

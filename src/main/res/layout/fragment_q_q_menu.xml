@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#272635"
+
     tools:context=".QQMenuFragment">
 
     <Button
@@ -12,8 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/menu_begin_quiz"
+        android:textColor="#C2C3C9"
         app:layout_constraintBottom_toTopOf="@+id/editButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,21 +29,44 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/menu_question_editor"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#C2C3C9"
+        app:layout_constraintBottom_toTopOf="@+id/bonusButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/welcomeTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display_bold_italic"
         android:text="@string/menu_welcome"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#C2C3C9"
+        android:textSize="56sp"
         app:layout_constraintBottom_toTopOf="@+id/beginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bonusButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="@string/menu_bonus"
+        android:textColor="#C2C3C9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

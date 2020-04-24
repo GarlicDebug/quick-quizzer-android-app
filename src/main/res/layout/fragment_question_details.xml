@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#272635"
+
     tools:context=".QuestionDetailsFragment" >
 
     <EditText
@@ -14,9 +16,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:fontFamily="@font/playfair_display_bold_italic"
         android:hint="@string/editor_question_enter_hint"
         android:inputType="textPersonName"
         android:text="@string/editor_question_enter_hint"
+        android:textColor="#C2C3C9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/editor_entry_label"
+        android:textColor="#C2C3C9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +45,9 @@
         android:layout_marginStart="29dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/source_sans_pro"
         android:text="@string/editor_question_solution"
+        android:textColor="#C2C3C9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_body_text" />
