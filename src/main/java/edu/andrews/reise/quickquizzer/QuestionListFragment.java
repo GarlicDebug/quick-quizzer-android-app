@@ -83,6 +83,7 @@ public class QuestionListFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState){
+        getActivity().getApplication().setTheme(R.style.AppThemeWithBar);
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         getActivity().setTitle(R.string.question_list_label);

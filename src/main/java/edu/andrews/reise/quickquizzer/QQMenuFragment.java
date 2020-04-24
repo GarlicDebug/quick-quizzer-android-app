@@ -3,6 +3,8 @@ package edu.andrews.reise.quickquizzer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +32,6 @@ public class QQMenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_q_q_menu, container, false);
-
 
         quizStartButton = v.findViewById(R.id.beginButton);
         questionEditButton = v.findViewById(R.id.editButton);

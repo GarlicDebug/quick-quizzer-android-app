@@ -44,7 +44,7 @@ public class QuizzingScreenFragment extends Fragment {
     private ArrayList<Question> mQuestionList;
     /** */
     String answerFeedbackCorrect = "Your answer was correct!";
-    String answerFeedbackIncorrect = "Your answer was correct!";
+    String answerFeedbackIncorrect = "Your answer was incorrect!";
 
 
     public QuizzingScreenFragment() {

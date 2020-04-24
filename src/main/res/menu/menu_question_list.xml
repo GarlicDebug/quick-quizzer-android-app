@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/menu_item_add_question"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/smaller_draw_icon"
         android:title="@string/new_question"
         app:showAsAction="always" />
 </menu>

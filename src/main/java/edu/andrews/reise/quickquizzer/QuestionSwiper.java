@@ -29,9 +29,9 @@ public class QuestionSwiper extends ItemTouchHelper.SimpleCallback {
         mAdapter = adapter;
         // Get reference to delete icon
         mIcon = ContextCompat.getDrawable(mAdapter.getActivity(),
-                android.R.drawable.ic_menu_delete);
+                R.drawable.trash_icon_small);
         // Set background color displayed as question is swiped
-        mBackground = new ColorDrawable(Color.GRAY);
+        mBackground = new ColorDrawable(Color.parseColor("#D33333"));
     }
     /**
      * Returns true if user drags a question to another position in the list.
