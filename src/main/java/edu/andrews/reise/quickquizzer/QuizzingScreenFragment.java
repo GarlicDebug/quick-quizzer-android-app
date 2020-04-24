@@ -105,16 +105,16 @@ public class QuizzingScreenFragment extends Fragment {
 
         mQuestionList = QuestionList.getInstance(getActivity()).getQuestions();
 
-        //redisplay the question that was displayed before the activity was destroyed
-        if (savedInstanceState != null){
-        mCurrentIndex = savedInstanceState.getInt(KEY_QUESTION_INDEX);
-        }
-
-        updateQuestion();
-
         mQuestionTextView = v.findViewById(R.id.questionBodyTextView);
         mTrueButton = v.findViewById(R.id.trueButton);
         mFalseButton = v.findViewById(R.id.falseButton);
+
+        //redisplay the question that was displayed before the activity was destroyed
+        if (savedInstanceState != null){
+            mCurrentIndex = savedInstanceState.getInt(KEY_QUESTION_INDEX);
+        }
+
+        updateQuestion();
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
