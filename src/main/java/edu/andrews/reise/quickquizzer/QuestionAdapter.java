@@ -20,6 +20,8 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
     public static final String EXTRA_QUESTION_ID = "edu.andrews.quickquizzer.question_id";
     /** Used to store reference to list of questions */
     private ArrayList<Question> mQuestions;
+    /** Activity hosting the list fragment */
+    private Activity mActivity;
 
     /**
      * Constructor for QuestionAdapter. Initialize adapter with given list of questions.
@@ -29,12 +31,11 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         mQuestions = questions;
     }
 
-    /** Activity hosting the list fragment */
-    private Activity mActivity;
     public QuestionAdapter(ArrayList<Question> questions, Activity activity) {
         mQuestions = questions;
         mActivity = activity;
     }
+
     /** Return reference to activity hosting the question list fragment */
     public Context getActivity() {
         return mActivity;
@@ -148,9 +149,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         View questionView = inflater.inflate(R.layout.list_item_question, parent, false);
 
         // Create a view holder to store references to the widgets on the new view.
-        ViewHolder viewHolder = new ViewHolder(questionView);
-
-        return viewHolder;
+        return new ViewHolder(questionView);
     }
 
     /**

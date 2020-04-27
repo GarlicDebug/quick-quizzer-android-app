@@ -55,14 +55,11 @@ public class QuestionListFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()){
-            case R.id.menu_item_add_question:
-                // new question icon clicked
-                addQuestion();
-                return true;
-            default:
-                return  super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.menu_item_add_question) {// new question icon clicked
+            addQuestion();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
