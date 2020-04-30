@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272635"
+
+    tools:context=".QQMenuFragment">
+
+    <Button
+        android:id="@+id/beginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="@string/menu_begin_quiz"
+        android:textColor="@color/colorNiceWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/welcomeTextview" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="@string/menu_question_editor"
+        android:textColor="@color/colorNiceWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/welcomeTextview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTextview"
+        android:layout_width="479dp"
+        android:layout_height="178dp"
+        android:layout_marginEnd="192dp"
+        android:fontFamily="@font/playfair_display_bold_italic"
+        android:text="@string/menu_welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorNiceWhite"
+        android:textSize="56sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bonusButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FE6160"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="@string/menu_bonus"
+        android:textColor="@color/colorNiceWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/welcomeTextview"
+        app:layout_constraintTop_toBottomOf="@+id/editButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

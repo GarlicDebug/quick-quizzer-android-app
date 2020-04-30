@@ -75,9 +75,13 @@ public class QuizzingScreenFragment extends Fragment {
 
     /** Display the question at the current index */
     private void updateQuestion(){
-        String question = mQuestionList.get(mCurrentIndex).getBody();
+        if(mQuestionList.size()==0){
+        }
+        else {
+            String question = mQuestionList.get(mCurrentIndex).getBody();
 
-        mQuestionTextView.setText(question);
+            mQuestionTextView.setText(question);
+        }
     }
 
     /**
