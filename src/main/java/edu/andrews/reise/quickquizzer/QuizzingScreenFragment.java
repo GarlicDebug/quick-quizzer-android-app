@@ -123,11 +123,11 @@ public class QuizzingScreenFragment extends Fragment {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                giveAnswerFeedback(true);
                 mCurrentIndex++;
                 if (mCurrentIndex == mQuestionList.size()){
                     mCurrentIndex = 0;
                 }
-                giveAnswerFeedback(true);
                 updateQuestion();
             }
         });
@@ -135,12 +135,11 @@ public class QuizzingScreenFragment extends Fragment {
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                giveAnswerFeedback(false);
                 mCurrentIndex++;
-
                 if (mCurrentIndex == mQuestionList.size()){
                     mCurrentIndex = 0;
                 }
-                giveAnswerFeedback(false);
                 updateQuestion();
             }
         });
